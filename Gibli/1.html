@@ -154,9 +154,12 @@
     <div class="poster-description" id="main-description">
       This is a captivating story set in a world of fantasy and adventure. Join the protagonist as they journey through magical landscapes, encounter mystical creatures, and learn valuable lessons about friendship, bravery, and the importance of nature.
     </div>
-    <a href="#" id="poster-link" class="poster-link" target="_blank">Learn more about this movie</a>
+    <div>
+      <a href="https://www.netflix.com/kr/title/60027393?source=35" id="netflix-link" class="poster-link" target="_blank">넷플릭스</a>
+      <a href="#" id="wavve-link" class="poster-link" target="_blank">웨이브</a>
+      <a href="#" id="watcha-link" class="poster-link" target="_blank">왓챠</a>
+    </div>
   </div>
-
   <!-- Divider Line (Horizontal) -->
   <div class="divider-horizontal"></div>
 
@@ -173,10 +176,13 @@
 
   <!-- Bottom Poster Grid Section (2x2 layout) -->
   <div class="bottom-poster-grid" id="poster-grid">
-    <img src="2.jpg" alt="Poster 1" onclick="changeMainPoster(0)">
-    <img src="3.jpg" alt="Poster 2" onclick="changeMainPoster(1)">
-    <img src="4.jpg" alt="Poster 3" onclick="changeMainPoster(2)">
-    <img src="6.jpg" alt="Poster 4" onclick="changeMainPoster(3)">
+    <img src="3.webp" alt="Poster 1" onclick="changeMainPoster(0)">
+    <img src="4.jpeg" alt="Poster 2" onclick="changeMainPoster(1)">
+    <img src="5.jpg" alt="Poster 3" onclick="changeMainPoster(2)">
+    <img src="7.jpg" alt="Poster 4" onclick="changeMainPoster(3)">
+  </div>
+  <div>
+    <a href="https://www.ghibli.jp/" id="poster-link" class="poster-link" target="_blank">지브리 스튜디오</a>
   </div>
 
 </div>
@@ -184,10 +190,21 @@
 <script>
   // Poster data array
   let posters = [
-    { title: 'Poster 1 Title', mainPosterSrc: '2.jpg', characterImageSrc: 'character1.jpg', characterIntroText: 'This is the story of character 1, filled with courage and kindness.', description: 'A tale of adventure and heartwarming friendship unfolds with character 1 as they brave unknown lands.', link: 'https://example.com/poster1' },
-    { title: 'Poster 2 Title', mainPosterSrc: '3.jpg', characterImageSrc: 'character2.jpg', characterIntroText: 'Character 2 embarks on a mystical journey that changes everything.', description: 'Follow character 2 as they embark on a journey filled with wonder and discovery.', link: 'https://example.com/poster2' },
-    { title: 'Poster 3 Title', mainPosterSrc: '4.jpg', characterImageSrc: 'character3.jpg', characterIntroText: 'In a world of dreams, character 3 discovers a hidden truth.', description: 'Character 3 uncovers hidden secrets that lead them to a deeper understanding of their world.', link: 'https://example.com/poster3' },
-    { title: 'Poster 4 Title', mainPosterSrc: '6.jpg', characterImageSrc: 'character4.jpg', characterIntroText: 'With unwavering bravery, character 4 faces incredible odds.', description: 'Bravery and determination drive character 4 as they face the challenges that lie ahead.', link: 'https://example.com/poster4' }
+    { title: 'Poster 1 Title', mainPosterSrc: '3.webp', characterImageSrc: '2.jpg', characterIntroText: 'This is the story of character 1, filled with courage and kindness.', description: 'A tale of adventure and heartwarming friendship unfolds with character 1 as they brave unknown lands.',
+     netflixLink: 'https://www.netflix.com/kr/title/60027393?source=35',
+      wavveLink: 'https://www.wavve.com/player/movie?movieid=MV_CR01_DN0000011316&autoplay=y'},
+    { title: 'Poster 2 Title', mainPosterSrc: '4.jpeg', characterImageSrc: '6.jpg', characterIntroText: 'Character 2 embarks on a mystical journey that changes everything.', description: 'Follow character 2 as they embark on a journey filled with wonder and discovery.',
+     netflixLink: 'https://www.netflix.com/kr/title/70028883?source=35',
+     wavveLink: 'https://www.wavve.com/player/movie?movieid=MV_CR01_DN0000011324&autoplay=y',
+     watchaLink: 'https://watcha.com/ko-KR/contents/mJOV1RW?utm_campaign=metadata&utm_source=google&utm_medium=search'},
+    { title: 'Poster 3 Title', mainPosterSrc: '5.jpg', characterImageSrc: '9.jpg', characterIntroText: 'In a world of dreams, character 3 discovers a hidden truth.', description: 'Character 3 uncovers hidden secrets that lead them to a deeper understanding of their world.',
+    netflixLink: 'https://www.netflix.com/kr/title/70106454?source=35',
+    wavveLink: 'https://www.wavve.com/player/movie?movieid=MV_CR01_DN0000011305&autoplay=y',
+    watchaLink: 'https://watcha.com/ko-KR/contents/mWLjlkd?utm_campaign=metadata&utm_source=google&utm_medium=search'},
+    { title: 'Poster 4 Title', mainPosterSrc: '7.jpg', characterImageSrc: '10.webp', characterIntroText: 'With unwavering bravery, character 4 faces incredible odds.', description: 'Bravery and determination drive character 4 as they face the challenges that lie ahead.',
+    netflixLink: 'https://www.netflix.com/kr/title/70019058?source=35',
+      wavveLink: 'https://www.wavve.com/player/movie?movieid=MV_CR01_DN0000011289&autoplay=y',
+      watchaLink: 'https://watcha.com/ko-KR/contents/mpWplgW?utm_campaign=metadata&utm_source=google&utm_medium=search'}
   ];
 
   // Function to change the main poster and update the poster grid order
@@ -199,7 +216,7 @@
       characterImageSrc: document.getElementById('character-image').src,
       characterIntroText: document.getElementById('character-intro').textContent,
       description: document.getElementById('main-description').textContent,
-      link: document.getElementById('poster-link').href
+      link: document.getElementById('poster-link').href //링크 저장
     };
 
     // Update the main poster with the selected poster's data
@@ -208,6 +225,7 @@
     document.getElementById('character-image').src = posters[index].characterImageSrc;
     document.getElementById('character-intro').textContent = posters[index].characterIntroText;
     document.getElementById('main-description').textContent = posters[index].description;
+    // 포스터 정보 업데이트 시 링크도 변경
     document.getElementById('poster-link').href = posters[index].link;
 
     // Update the posters array by removing the selected poster and appending the old main poster to the end
@@ -216,3 +234,11 @@
 
     // Update poster grid images
     const posterGrid = document.getElementById('poster-grid').children;
+    for (let i = 0; i < posters.length; i++) {
+      posterGrid[i].src = posters[i].mainPosterSrc;
+    }
+  }
+</script>
+
+</body>
+</html>
