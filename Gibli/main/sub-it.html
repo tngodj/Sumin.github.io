@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Showcase</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #121212;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .character-header {
+            position: relative;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .character-image {
+            width: 100%;
+            height: auto;
+        }
+
+        .character-title {
+            position: relative;
+            background-color: rgba(0, 0, 0, 0.7); /* 반투명 배경 */
+            padding: 20px;
+            text-align: center;
+            color: #fff;
+            border-top: 4px solid #444; /* 상단 경계선 */
+        }
+
+        .character-title h1 {
+            font-size: 3rem;
+            margin: 0;
+            font-weight: bold;
+        }
+
+        .character-title h2 {
+            font-size: 1.5rem;
+            margin: 10px 0;
+            font-weight: 300;
+        }
+
+        .divider {
+            width: 60%;
+            height: 1px;
+            margin: 20px auto;
+            background-color: #555;
+        }
+
+        .quote-section {
+            text-align: center;
+            font-style: italic;
+            margin: 20px 0;
+        }
+
+        .quote-section p {
+            font-size: 1.2rem;
+            margin: 0;
+        }
+
+        .quote-author {
+            margin-top: 10px;
+            font-size: 1rem;
+            color: #aaa;
+        }
+
+        .info-section {
+            display: flex;
+            justify-content: space-around;
+            width: 80%;
+            margin-top: 20px;
+        }
+
+        .info-card {
+            background-color: #222;
+            padding: 20px;
+            width: 45%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        .info-card h3 {
+            margin: 10px 0;
+            font-size: 1.2rem;
+        }
+
+        .info-card p {
+            color: #bbb;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="character-header">
+        <!-- 캐릭터 이미지 -->
+        <img src="토토로 4.png" alt="Character Image" class="character-image">
+        <!-- 타이틀 -->
+        <div class="character-title">
+            <h1>아펠리오스</h1>
+            <h2>신념의 무기</h2>
+        </div>
+    </div>
+
+    <!-- 구분선 -->
+    <div class="divider"></div>
+
+    <!-- 인용구 섹션 -->
+    <div class="quote-section">
+        <p>“운명을 부정할수록 우리의 믿음은 굳건해져.”</p>
+        <div class="quote-author">~ 알룬</div>
+    </div>
+
+    <!-- 추가 정보 -->
+    <div class="info-section">
+        <div class="info-card">
+            <h3>관련 챔피언</h3>
+            <p>다른 타곤의 챔피언을 탐험하세요.</p>
+        </div>
+        <div class="info-card">
+            <h3>역할군</h3>
+            <p>원거리 딜러</p>
+        </div>
+    </div>
+</body>
+</html>
