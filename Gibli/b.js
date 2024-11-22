@@ -1,9 +1,10 @@
 const images = [
-    '1.jpg',
-    '3.jpeg',
-    '4.jpg',
-    '5.jpg',
-    '7.jpg'
+    'totoro.jpeg',
+    'cat.jpg',
+    'haul.jpg',
+    'sen.jpg',
+    'ponyo.jpg',
+    'raputa.jpg'
 ];
 const imageLinks = [
     '1.html', // '1.jpg'에 연결된 링크
