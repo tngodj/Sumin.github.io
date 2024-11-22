@@ -4,14 +4,15 @@ const images = [
     'haul.jpg',
     'sen.jpg',
     'ponyo.jpg',
-    'raputa.jpg'
+    'laputa.jpg'
 ];
 const imageLinks = [
-    '1.html', // '1.jpg'에 연결된 링크
-    '2.html', // '7.jpg'에 연결된 링크
-    '3.html', // '3.jpeg'에 연결된 링크
-    '4.html', // '4.jpg'에 연결된 링크
-    '5.html'  // '5.jpg'에 연결된 링크
+    'totoro.html', // '1.jpg'에 연결된 링크
+    'cat.html', // '7.jpg'에 연결된 링크
+    'haul.html', // '3.jpeg'에 연결된 링크
+    'sen.html', // '4.jpg'에 연결된 링크
+    'ponyo.html',  // '5.jpg'에 연결된 링크
+    'laputa.html' // '6.jpg'에 연결된 링크
 ];
 
 

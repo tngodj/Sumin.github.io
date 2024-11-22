@@ -48,6 +48,7 @@
         left: 50%;
         transform: translateX(-50%);
         width: 100%;
+        min-height:40vh;
         height: 100%;
         z-index: 1;
         opacity: 0.6; /* GIF 이미지 투명도 */
@@ -67,12 +68,38 @@
         overflow: hidden;
     }
 
-    /* 왼쪽 GIF 이미지 */
-    .gif-left {
+    /* 하단 GIF 섹션 스타일 */
+    .bottom-gif-section {
+        width: 100%;
+        min-height: 100vh;
+        height: auto; /* 섹션 높이 */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #ececec;
+        position: relative;
+        overflow: hidden;
+    }
+   
+    .bottom-gif-container {
         position: absolute;
-        left: -10%;
         top: 0;
-        width: 120%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        opacity: 0.8;
+        overflow: hidden;
+    }
+
+
+    /* 하단 GIF 이미지 */
+    .gif-bottom {
+        position: absolute;
+        left: 0%;
+        top: 0;
+        width: 100%;
         height: 100%;
         object-fit: cover;
         filter: brightness(0.9);
@@ -98,7 +125,7 @@
         width: 120%;
         height: 100%;
         object-fit: cover;
-        filter: brightness(0.7);
+        filter: brightness(1.0);
     }
 
     /* 소개란 */
@@ -243,14 +270,10 @@
 <body>
     <!-- 소개란 섹션 -->
     <div class="section intro-section">
-        <!-- 왼쪽 뒷배경 GIF 이미지 -->
-        <div class="gif-container">
-            <img src="" alt="Ghibli GIF" class="gif-left">
-        </div>
 
-        <!-- 오른쪽 뒷배경 GIF 이미지 -->
+        <!--  뒷배경 GIF 이미지 -->
         <div class="gif-container">
-            <img src="gif-3.gif" alt="Ghibli GIF" class="gif-right">
+            <img src="가오나시.gif" alt="Ghibli GIF" class="gif-right">
         </div>
 
         <!-- 소개란 -->
@@ -264,17 +287,27 @@
 
     <!-- 캐러셀 섹션 -->
     <div class="section carousel-section">
+    
         <!-- 본문 배경 -->
-         <div class="jpg-container">
-            <img src="8.jpg" alt="Ghibli jpg" class="jpg-middle">
-         </div>
+        <div class="jpg-container">
+            <img src="포뇨 GIF 1.gif" alt="Ghibli jpg" class="jpg-middle">
+        </div>
 
         <div class="carousel-container">
             <button class="carousel-button" id="prevBtn">&#9664;</button>
             <img src="totoro.jpeg" alt="Carousel Image" class="carousel-image" id="carouselImage">
             <button class="carousel-button" id="nextBtn">&#9654;</button>
-        </div>
     </div>
+    </div>
+        
+    <!-- 하단 GIF 섹션 -->
+        <div class="section bottom-gif-section">
+            <div class="bottom-gif-container">
+                <img src="리사 GIF.gif" alt="Ghibli GIF" class="gif-bottom">
+            </div>
+        </div>
+    
+    
 
     <!-- 스크롤 캐릭터 이미지 -->
     <img src="gif-1.gif" alt="Scroll Character" class="scroll-character">
