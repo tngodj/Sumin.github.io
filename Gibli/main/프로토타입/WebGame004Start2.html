@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        이상형 월드컵 4강(2/2)
+    </title>
+
+    <style>
+    div1{
+        margin : 10px;
+        position : absolute;
+        width: 600px;
+        height: 80px;
+    }
+    div2{
+        position : absolute;
+        margin: 10px;
+    }
+    div3{
+        position : absolute;
+        margin: 10px;
+    }
+    div4{
+        position : absolute;
+        margin: 10px;
+    }
+    h2{
+        position : absolute;
+        width : 200px;
+        margin : 10px;
+        text-align : center;
+    }
+    input{
+            width : 200px;
+        }
+    </style>
+</head>
+<body style="background-image: url('배경화면0005.jpg');">
+
+    <div1 style="left: 36%; top: 30px;">
+        <h1 style="color: white">지브리 캐릭터 이상형 월드컵 4강(2/2)</h1>
+    </div1>
+
+    <div2 style="top: 0px; right: 0px;">
+        <a href="WebGame001Start1.html">
+        <input type="submit" value="포기하기" style="font-size: 35px; background-color: rgb(28, 152, 209);">
+        </a>
+    </div2>
+
+    <h2 id="A" style="left: 32%; top: 300px; background-color: rgb(28, 152, 209);">
+        임시 텍스트
+    </h2>
+
+    <h2 id="B" style="left: 59%; top: 300px; background-color: rgb(28, 152, 209);">
+        임시 텍스트
+    </h2>
+
+    
+    <div2 style="left: 32%; top: 350px;">
+        <img src="image0016.png" width="200" height="266px" id = "imagechange12">
+    </div2>
+    
+    <div2 style="left: 59%; top: 350px;">
+        <img src="image0016.png" width="200" height="266px" id = "imagechange34">
+    </div2>
+
+    <div3 style="left: 32%; top: 650px;">
+        <input type="submit" value="선택하기" height="100px" onclick="CASE300(this)" id = "win1"
+        style="font-size: 35px; background-color: rgb(28, 152, 209);"
+        onmouseover="this.style='font-size: 35px; background-color: red;'"
+        onmouseout="this.style='font-size: 35px; background-color: rgb(28, 152, 209);'">
+    </div3>
+
+    <div3 style="left: 59%; top: 650px;">
+        <input type="submit" value="선택하기" height="100px" onclick="CASE301(this)" id = "win2"
+        style="font-size: 35px; background-color: rgb(28, 152, 209);"
+        onmouseover="this.style='font-size: 35px; background-color: red;'"
+        onmouseout="this.style='font-size: 35px; background-color: rgb(28, 152, 209);'">
+    </div3>
+
+    <script type="module">
+        const $change12 = document.getElementById("imagechange12");
+        const $change34 = document.getElementById("imagechange34");
+        const X = document.getElementById("A");
+        const Y = document.getElementById("B");
+        var A = 1;
+        
+        const sc17 = localStorage.getItem("img217score");
+        const sc18 = localStorage.getItem("img218score");
+        const sc19 = localStorage.getItem("img219score");
+        const sc20 = localStorage.getItem("img220score");
+        const sc21 = localStorage.getItem("img221score");
+        const sc22 = localStorage.getItem("img222score");
+        const sc23 = localStorage.getItem("img223score");
+        const sc25 = localStorage.getItem("img225score");
+        const sc26 = localStorage.getItem("img226score");
+        const sc27 = localStorage.getItem("img227score");
+        const sc28 = localStorage.getItem("img228score");
+        const sc29 = localStorage.getItem("img229score");
+        const sc30 = localStorage.getItem("img230score");
+        const sc31 = localStorage.getItem("img231score");
+
+    if(A == 1){
+        if(sc17 == '3'){
+            $change12.setAttribute("src", "image0017.png");
+            X.innerText = "고양이 왕"
+            A = 0;
+        }
+        else if(sc18 == '3'){
+            $change12.setAttribute("src", "image0018.png");
+            X.innerText = "리사"
+            A = 0;
+        }
+        else if(sc19 == '3'){
+            $change12.setAttribute("src", "image0019.png");
+            X.innerText = "보우"
+            A = 0;
+        }
+        else if(sc20 == '3'){
+            $change12.setAttribute("src", "image0020.jpg");
+            X.innerText = "쿠사카베 야스코"
+            A = 0;
+        }
+        else if(sc21 == '3'){
+            $change12.setAttribute("src", "image0021.png");
+            X.innerText = "나토루"
+            A = 0;
+        }
+        else if(sc22 == '3'){
+            $change12.setAttribute("src", "image0022.png");
+            X.innerText = "후지모토"
+            A = 0;
+        }
+        else if(sc23 == '3'){
+            $change12.setAttribute("src", "image0023.png");
+            X.innerText = "오기노 치히로"
+            A = 0;
+        }
+        else{
+            $change12.setAttribute("src", "image0024.jpg");
+            X.innerText = "도라"
+            A = 0;
+        }
+
+        if(sc25 == '3'){
+            $change34.setAttribute("src", "image0025.png");
+            Y.innerText = "나토리"
+            A = 0;
+        }
+        else if(sc26 == '3'){
+            $change34.setAttribute("src", "image0026.png");
+            Y.innerText = "코이치"
+            A = 0;
+        }
+        else if(sc27 == '3'){
+            $change34.setAttribute("src", "image0027.png");
+            Y.innerText = "쿠사카베 타츠오"
+            A = 0;
+        }
+        else if(sc28 == '3'){
+            $change34.setAttribute("src", "image0028.png");
+            Y.innerText = "린"
+            A = 0;
+        }
+        else if(sc29 == '3'){
+            $change34.setAttribute("src", "image0029.png");
+            Y.innerText = "룬"
+            A = 0;
+        }
+        else if(sc30 == '3'){
+            $change34.setAttribute("src", "image0030.png");
+            Y.innerText = "가오나시"
+            A = 0;
+        }
+        else if(sc31 == '3'){
+            $change34.setAttribute("src", "image0031.png");
+            Y.innerText = "칸타"
+            A = 0;
+        }
+        else{
+            $change34.setAttribute("src", "image0032.jpg");
+            Y.innerText = "하쿠"
+            A = 0;
+        }
+    }
+
+    var score300 = document.getElementById("win1");
+        score300.addEventListener("click", CASE300);
+    
+    function CASE300(obj){
+    
+        if(sc17 == '3'){
+            localStorage.setItem("img317score",3);
+            location.href = "WebGame005Start1.html";
+        }
+        else if(sc18 == '3'){
+            localStorage.setItem("img318score",4);
+            location.href = "WebGame005Start1.html";
+        }
+        else if(sc19 == '3'){
+            localStorage.setItem("img319score",4);
+            location.href = "WebGame005Start1.html";
+        }
+        else if(sc20 == '3'){
+            localStorage.setItem("img320score",4);
+            location.href = "WebGame005Start1.html";
+        }
+        else if(sc21 == '3'){
+            localStorage.setItem("img321score",4);
+            location.href = "WebGame005Start1.html";
+        }
+        else if(sc22 == '3'){
+            localStorage.setItem("img322score",4);
+            location.href = "WebGame005Start1.html";
+        }
+        else if(sc23 == '3'){
+            localStorage.setItem("img323score",4);
+            location.href = "WebGame005Start1.html";
+        }
+        else{
+            localStorage.setItem("img324score",4);
+            location.href = "WebGame005Start1.html";
+        }
+    }
+
+    var score301 = document.getElementById("win2");
+        score301.addEventListener("click", CASE301);
+
+    function CASE301(obj){
+
+        if(sc25 == '3'){
+            localStorage.setItem("img325score",4);
+            location.href = "WebGame005Start1.html";
+        }
+        else if(sc26 == '3'){
+            localStorage.setItem("img326score",4);
+            location.href = "WebGame005Start1.html";
+        }
+        else if(sc27 == '3'){
+            localStorage.setItem("img327score",4);
+            location.href = "WebGame005Start1.html";
+        }
+        else if(sc28 == '3'){
+            localStorage.setItem("img328score",4);
+            location.href = "WebGame005Start1.html";
+        }
+        else if(sc29 == '3'){
+            localStorage.setItem("img329score",4);
+            location.href = "WebGame005Start1.html";
+        }
+        else if(sc30 == '3'){
+            localStorage.setItem("img330score",4);
+            location.href = "WebGame005Start1.html";
+        }
+        else if(sc31 == '3'){
+            localStorage.setItem("img331score",4);
+            location.href = "WebGame005Start1.html";
+        }
+        else{
+            localStorage.setItem("img332score",4);
+            location.href = "WebGame005Start1.html";
+        }
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        이상형 월드컵 16강(8/8)
+    </title>
+
+    <style>
+    div1{
+        margin : 10px;
+        position : absolute;
+        width: 600px;
+        height: 80px;
+    }
+    div2{
+        position : absolute;
+        margin: 10px;
+    }
+    div3{
+        position : absolute;
+        margin: 10px;
+    }
+    div4{
+        position : absolute;
+        margin: 10px;
+    }
+    h2{
+        position : absolute;
+        width : 200px;
+        margin : 10px;
+        text-align : center;
+    }
+    input{
+            width : 200px;
+        }
+    </style>
+</head>
+<body style="background-image: url('배경화면0003.jpg');">
+
+    <div1 style="left: 35%; top: 30px;">
+        <h1 style="color: white">지브리 캐릭터 이상형 월드컵 16강(8/8)</h1>
+    </div1>
+
+    <h2 id="A" style="left: 32%; top: 300px; background-color: rgb(185, 139, 52);">
+        임시 텍스트
+    </h2>
+
+    <h2 id="B" style="left: 59%; top: 300px; background-color: rgb(185, 139, 52);">
+        임시 텍스트
+    </h2>
+
+    <div2 style="top: 0px; right: 0px;">
+        <a href="WebGame001Start1.html">
+        <input type="submit" value="포기하기" style="font-size: 35px; background-color: rgb(185, 139, 52);">
+        </a>
+    </div2>
+
+    
+    <div2 style="left: 32%; top: 350px;">
+        <img src="image0016.png" width="200" height="266px" id = "imagechange12">
+    </div2>
+    
+    <div2 style="left: 59%; top: 350px;">
+        <img src="image0016.png" width="200" height="266px" id = "imagechange34">
+    </div2>
+
+    <div3 style="left: 32%; top: 650px;">
+        <input type="submit" value="선택하기" height="100px" onclick="CASE104(this)" id = "win1"
+        style="font-size: 35px; background-color: rgb(185, 139, 52);"
+        onmouseover="this.style='font-size: 35px; background-color: red;'"
+        onmouseout="this.style='font-size: 35px; background-color: rgb(185, 139, 52);'">
+    </div3>
+
+    <div3 style="left: 59%; top: 650px;">
+        <input type="submit" value="선택하기" height="100px" onclick="CASE105(this)" id = "win2"
+        style="font-size: 35px; background-color: rgb(185, 139, 52);"
+        onmouseover="this.style='font-size: 35px; background-color: red;'"
+        onmouseout="this.style='font-size: 35px; background-color: rgb(185, 139, 52);'">
+    </div3>
+
+    <script type="module">
+        const $change12 = document.getElementById("imagechange12");
+        const $change34 = document.getElementById("imagechange34");
+        const X = document.getElementById("A");
+        const Y = document.getElementById("B");
+        var A = 1;
+        
+        const sc29 = localStorage.getItem("img29score");
+        const sc31 = localStorage.getItem("img31score");
+
+    if(A == 1){
+        if(sc29 == '1'){
+            $change12.setAttribute("src", "image0029.png");
+            X.innerText = "룬"
+            A = 0;
+        }
+        else{
+            $change12.setAttribute("src", "image0030.png");
+            X.innerText = "가오나시"
+            A = 0;
+        }
+
+        if(sc31 == '1'){
+            $change34.setAttribute("src", "image0031.png");
+            Y.innerText = "칸타"
+            A = 0;
+        }
+        else{
+            $change34.setAttribute("src", "image0032.jpg");
+            Y.innerText = "하쿠"
+            A = 0;
+        }
+    }
+
+    var score102 = document.getElementById("win1");
+        score102.addEventListener("click", CASE104);
+    
+    function CASE104(obj){
+    
+     if(sc29 == '1'){
+        localStorage.setItem("img129score",2);
+        location.href = "WebGame003Start1.html";
+        }
+     else{
+        localStorage.setItem("img130score",2);
+        location.href = "WebGame003Start1.html";
+        }
+    }
+
+    var score103 = document.getElementById("win2");
+    score103.addEventListener("click", CASE105);
+
+    function CASE105(obj){
+
+     if(sc31 == '1'){
+        localStorage.setItem("img131score",2);
+        location.href = "WebGame003Start1.html";
+        }
+     else{
+        localStorage.setItem("img132score",2);
+        location.href = "WebGame003Start1.html";
+        }
+    }
+        </script>
+</body>
+</html>

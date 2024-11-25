@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        이상형 월드컵 결승
+    </title>
+
+    <style>
+    div1{
+        margin : 10px;
+        position : absolute;
+        width: 600px;
+        height: 80px;
+    }
+    div2{
+        position : absolute;
+        margin: 10px;
+    }
+    div3{
+        position : absolute;
+        margin: 10px;
+    }
+    div4{
+        position : absolute;
+        margin: 10px;
+    }
+    h2{
+        position : absolute;
+        width : 200px;
+        margin : 10px;
+        text-align : center;
+    }
+    input{
+            width : 200px;
+        }
+    </style>
+</head>
+<body style="background-image: url('배경화면0006.jpg');">
+
+    <div1 style="left: 37.5%; top: 30px;">
+        <h1 style="color: white">지브리 캐릭터 이상형 월드컵 결승</h1>
+    </div1>
+
+    <div2 style="top: 0px; right: 0px;">
+        <a href="WebGame001Start1.html">
+        <input type="submit" value="포기하기" style="font-size: 35px; background-color: rgb(128, 51, 49);">
+        </a>
+    </div2>
+
+    <h2 id="A" style="left: 32%; top: 300px; background-color: rgb(128, 51, 49);">
+        임시 텍스트
+    </h2>
+
+    <h2 id="B" style="left: 59%; top: 300px; background-color: rgb(128, 51, 49);">
+        임시 텍스트
+    </h2>
+
+    
+    <div2 style="left: 32%; top: 350px;">
+        <img src="image0016.png" width="200" height="266px" id = "imagechange12">
+    </div2>
+    
+    <div2 style="left: 59%; top: 350px;">
+        <img src="image0016.png" width="200" height="266px" id = "imagechange34">
+    </div2>
+
+    <div3 style="left: 32%; top: 650px;">
+        <input type="submit" value="선택하기" height="100px" onclick="CASE300(this)" id = "win1"
+        style="font-size: 35px; background-color: rgb(128, 51, 49);"
+        onmouseover="this.style='font-size: 35px; background-color: red;'"
+        onmouseout="this.style='font-size: 35px; background-color: rgb(128, 51, 49);'">
+    </div3>
+
+    <div3 style="left: 59%; top: 650px;">
+        <input type="submit" value="선택하기" height="100px" onclick="CASE301(this)" id = "win2"
+        style="font-size: 35px; background-color: rgb(128, 51, 49);"
+        onmouseover="this.style='font-size: 35px; background-color: red;'"
+        onmouseout="this.style='font-size: 35px; background-color: rgb(128, 51, 49);'">
+    </div3>
+
+    <script type="module">
+        const $change12 = document.getElementById("imagechange12");//왼쪽 사진 변경
+        const $change34 = document.getElementById("imagechange34");//오른쪽 사진 변경
+        const X = document.getElementById("A");
+        const Y = document.getElementById("B");
+        var A = 1;
+        
+        const sc1 = localStorage.getItem("img301score");//왼쪽 사진 변경
+        const sc2 = localStorage.getItem("img302score");
+        const sc3 = localStorage.getItem("img303score");
+        const sc4 = localStorage.getItem("img304score");
+        const sc5 = localStorage.getItem("img305score");
+        const sc6 = localStorage.getItem("img306score");
+        const sc7 = localStorage.getItem("img307score");
+        const sc8 = localStorage.getItem("img308score");
+        const sc9 = localStorage.getItem("img309score");
+        const sc10 = localStorage.getItem("img310score");
+        const sc11 = localStorage.getItem("img311score");
+        const sc12 = localStorage.getItem("img312score");
+        const sc13 = localStorage.getItem("img313score");
+        const sc14 = localStorage.getItem("img314score");
+        const sc15 = localStorage.getItem("img315score");
+        const sc17 = localStorage.getItem("img317score");//오른쪽 사진 변경
+        const sc18 = localStorage.getItem("img318score");
+        const sc19 = localStorage.getItem("img319score");
+        const sc20 = localStorage.getItem("img320score");
+        const sc21 = localStorage.getItem("img321score");
+        const sc22 = localStorage.getItem("img322score");
+        const sc23 = localStorage.getItem("img323score");
+        const sc24 = localStorage.getItem("img324score");
+        const sc25 = localStorage.getItem("img325score");
+        const sc26 = localStorage.getItem("img326score");
+        const sc27 = localStorage.getItem("img327score");
+        const sc28 = localStorage.getItem("img328score");
+        const sc29 = localStorage.getItem("img329score");
+        const sc30 = localStorage.getItem("img330score");
+        const sc31 = localStorage.getItem("img331score");
+
+    if(A == 1){
+        if(sc1 == '4'){
+            $change12.setAttribute("src", "image0001.png");//왼쪽 사진 변경(경우의 수 16), 이들 중 하나의 사진만 출력한다
+            X.innerText = "요시오카 하루"
+            A = 0;
+        }
+        else if(sc2 == '4'){
+            $change12.setAttribute("src", "image0002.png");
+            X.innerText = "포뇨"
+            A = 0;
+        }
+        else if(sc3 == '4'){
+            $change12.setAttribute("src", "image0003.png");
+            X.innerText = "쿠사카베 사츠키"
+            A = 0;
+        }
+        else if(sc4 == '4'){
+            $change12.setAttribute("src", "image0004.png");
+            X.innerText = "파즈"
+            A = 0;
+        }
+        else if(sc5 == '4'){
+            $change12.setAttribute("src", "image0005.png");
+            X.innerText = "소피"
+            A = 0;
+        }
+        else if(sc6 == '4'){
+            $change12.setAttribute("src", "image0006.png");
+            X.innerText = "요시오카 나오코"
+            A = 0;
+        }
+        else if(sc7 == '4'){
+            $change12.setAttribute("src", "image0007.png");
+            X.innerText = "소스케"
+            A = 0;
+        }
+        else if(sc8 == '4'){
+            $change12.setAttribute("src", "image0008.png");
+            X.innerText = "쿠사카베 메이"
+            A = 0;
+        }
+        else if(sc9 == '4'){
+            $change12.setAttribute("src", "image0009.png");
+            X.innerText = "시타"
+            A = 0;
+        }
+        else if(sc10 == '4'){
+            $change12.setAttribute("src", "image0010.png");
+            X.innerText = "하울"
+            A = 0;
+        }
+        else if(sc11 == '4'){
+            $change12.setAt1tribute("src", "image0011.png");
+            X.innerText = "히로미"
+            A = 0;
+        }
+        else if(sc12 == '4'){
+            $change12.setAttribute("src", "image0012.png");
+            X.innerText = "그랑 맘마레"
+            A = 0;
+        }
+        else if(sc13 == '4'){
+            $change12.setAttribute("src", "image0013.png");
+            X.innerText = "토토로"
+            A = 0;
+        }
+        else if(sc14 == '4'){
+            $change12.setAttribute("src", "image0014.png");
+            X.innerText = "기관장"
+            A = 0;
+        }
+        else if(sc15 == '4'){
+            $change12.setAttribute("src", "image0015.png");
+            X.innerText = "캘시퍼"
+            A = 0;
+        }
+        else{
+            $change12.setAttribute("src", "image0016.png");
+            X.innerText = "마르클"
+            A = 0;
+        }
+
+        if(sc17 == '4'){
+            $change34.setAttribute("src", "image0017.png");//오른쪽 사진 변경(경우의 수 16), 이들 중 하나의 사진만 출력한다
+            Y.innerText = "고양이 왕"
+            A = 0;
+        }
+        else if(sc18 == '4'){
+            $change34.setAttribute("src", "image0018.png");
+            Y.innerText = "리사"
+            A = 0;
+        }
+        else if(sc19 == '4'){
+            $change34.setAttribute("src", "image0019.png");
+            Y.innerText = "보우"
+            A = 0;
+        }
+        else if(sc20 == '4'){
+            $change34.setAttribute("src", "image0020.jpg");
+            Y.innerText = "쿠사카베 야스코"
+            A = 0;
+        }
+        else if(sc21 == '4'){
+            $change34.setAttribute("src", "image0021.png");
+            Y.innerText = "나토루"
+            A = 0;
+        }
+        else if(sc22 == '4'){
+            $change34.setAttribute("src", "image0022.png");
+            Y.innerText = "후지모토"
+            A = 0;
+        }
+        else if(sc23 == '4'){
+            $change34.setAttribute("src", "image0023.png");
+            Y.innerText = "오기노 치히로"
+            A = 0;
+        }
+        else if(sc24 == '4'){
+            $change34.setAttribute("src", "image0024.jpg");
+            X.innerText = "도라"
+            A = 0;
+        }
+        else if(sc25 == '4'){
+            $change34.setAttribute("src", "image0025.png");
+            Y.innerText = "나토리"
+            A = 0;
+        }
+        else if(sc26 == '4'){
+            $change34.setAttribute("src", "image0026.png");
+            Y.innerText = "코이치"
+            A = 0;
+        }
+        else if(sc27 == '4'){
+            $change34.setAt1tribute("src", "image0027.png");
+            Y.innerText = "쿠사카베 타츠오"
+            A = 0;
+        }
+        else if(sc28 == '4'){
+            $change34.setAttribute("src", "image0028.png");
+            Y.innerText = "린"
+            A = 0;
+        }
+        else if(sc29 == '4'){
+            $change34.setAttribute("src", "image0029.png");
+            Y.innerText = "룬"
+            A = 0;
+        }
+        else if(sc30 == '4'){
+            $change34.setAttribute("src", "image0030.png");
+            Y.innerText = "가오나시"
+            A = 0;
+        }
+        else if(sc31 == '4'){
+            $change34.setAttribute("src", "image0031.png");
+            Y.innerText = "칸타"
+            A = 0;
+        }
+        else{
+            $change34.setAttribute("src", "image0032.jpg");
+            Y.innerText = "하쿠"
+            A = 0;
+        }
+    }
+
+    var score300 = document.getElementById("win1");
+        score300.addEventListener("click", CASE300);//왼쪽 선택지(이들 중 하나의 정보만 기록한다)
+    
+    function CASE300(obj){
+    
+        if(sc1 == '4'){
+            localStorage.setItem("img401score",4);
+            location.href = "WebGame006End.html";
+        }
+        else if(sc2 == '4'){
+            localStorage.setItem("img402score",4);
+            location.href = "WebGame006End.html";
+        }
+        else if(sc3 == '4'){
+            localStorage.setItem("img403score",4);
+            location.href = "WebGame006End.html";
+        }
+        else if(sc4 == '4'){
+            localStorage.setItem("img404score",4);
+            location.href = "WebGame006End.html";
+        }
+        else if(sc5 == '4'){
+            localStorage.setItem("img405score",4);
+            location.href = "WebGame006End.html";
+        }
+        else if(sc6 == '4'){
+            localStorage.setItem("img406score",4);
+            location.href = "WebGame006End.html";
+        }
+        else if(sc7 == '4'){
+            localStorage.setItem("img407score",4);
+            location.href = "WebGame006End.html";
+        }
+        else if(sc8 == '4'){
+            localStorage.setItem("img408score",4);
+            location.href = "WebGame006End.html";
+        }
+        else if(sc9 == '4'){
+            localStorage.setItem("img409score",4);
+            location.href = "WebGame006End.html";
+        }
+        else if(sc10 == '4'){
+            localStorage.setItem("img410score",4);
+            location.href = "WebGame006End.html";
+        }
+        else if(sc11 == '4'){
+            localStorage.setItem("img411score",4);
+            location.href = "WebGame006End.html";
+        }
+        else if(sc12 == '4'){
+            localStorage.setItem("img412score",4);
+            location.href = "WebGame006End.html";
+        }
+        else if(sc13 == '4'){
+            localStorage.setItem("img413score",4);
+            location.href = "WebGame006End.html";
+        }
+        else if(sc14 == '4'){
+            localStorage.setItem("img414score",4);
+            location.href = "WebGame006End.html";
+        }
+        else if(sc15 == '4'){
+            localStorage.setItem("img415score",4);
+            location.href = "WebGame006End.html";
+        }
+        else{
+            localStorage.setItem("img416score",4);
+            location.href = "WebGame006End.html";
+        }
+    }
+
+    var score301 = document.getElementById("win2");
+        score301.addEventListener("click", CASE301);//오른쪽 선택지(이들 중 하나의 정보만 기록한다)
+
+    function CASE301(obj){
+
+        if(sc17 == '4'){
+            localStorage.setItem("img417score",4);
+            location.href = "WebGame006End.html";
+        }
+        else if(sc18 == '4'){
+            localStorage.setItem("img418score",4);
+            location.href = "WebGame006End.html";
+        }
+        else if(sc19 == '4'){
+            localStorage.setItem("img419score",4);
+            location.href = "WebGame006End.html";
+        }
+        else if(sc20 == '4'){
+            localStorage.setItem("img420score",4);
+            location.href = "WebGame006End.html";
+        }
+        else if(sc21 == '4'){
+            localStorage.setItem("img421score",4);
+            location.href = "WebGame006End.html";
+        }
+        else if(sc22 == '4'){
+            localStorage.setItem("img422score",4);
+            location.href = "WebGame006End.html";
+        }
+        else if(sc23 == '4'){
+            localStorage.setItem("img423score",4);
+            location.href = "WebGame006End.html";
+        }
+        else if(sc24 == '4'){
+            localStorage.setItem("img424score",4);
+            location.href = "WebGame006End.html";
+        }
+        else if(sc25 == '4'){
+            localStorage.setItem("img425score",4);
+            location.href = "WebGame006End.html";
+        }
+        else if(sc26 == '4'){
+            localStorage.setItem("img426score",4);
+            location.href = "WebGame006End.html";
+        }
+        else if(sc27 == '4'){
+            localStorage.setItem("img427score",4);
+            location.href = "WebGame006End.html";
+        }
+        else if(sc28 == '4'){
+            localStorage.setItem("img428score",4);
+            location.href = "WebGame006End.html";
+        }
+        else if(sc29 == '4'){
+            localStorage.setItem("img429score",4);
+            location.href = "WebGame006End.html";
+        }
+        else if(sc30 == '4'){
+            localStorage.setItem("img430score",4);
+            location.href = "WebGame006End.html";
+        }
+        else if(sc31 == '4'){
+            localStorage.setItem("img431score",4);
+            location.href = "WebGame006End.html";
+        }
+        else{
+            localStorage.setItem("img432score",4);
+            location.href = "WebGame006End.html";
+        }
+    }
+    </script>
+</body>
+</html>

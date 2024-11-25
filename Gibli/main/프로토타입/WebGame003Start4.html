@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        이상형 월드컵 8강(4/4)
+    </title>
+
+    <style>
+    div1{
+        margin : 10px;
+        position : absolute;
+        width: 600px;
+        height: 80px;
+    }
+    div2{
+        position : absolute;
+        margin: 10px;
+    }
+    div3{
+        position : absolute;
+        margin: 10px;
+    }
+    div4{
+        position : absolute;
+        margin: 10px;
+    }
+    h2{
+        position : absolute;
+        width : 200px;
+        margin : 10px;
+        text-align : center;
+    }
+    input{
+            width : 200px;
+        }
+    </style>
+</head>
+<body style="background-image: url('배경화면0004.jpg');">
+
+    <div1 style="left: 36%; top: 30px;">
+        <h1 style="color: white">지브리 캐릭터 이상형 월드컵 8강(4/4)</h1>
+    </div1>
+
+    <div2 style="top: 0px; right: 0px;">
+        <a href="WebGame001Start1.html">
+        <input type="submit" value="포기하기" style="font-size: 35px; background-color: rgb(46, 160, 80);">
+        </a>
+    </div2>
+
+    <h2 id="A" style="left: 32%; top: 300px; background-color: rgb(46, 160, 80);">
+        임시 텍스트
+    </h2>
+
+    <h2 id="B" style="left: 59%; top: 300px; background-color: rgb(46, 160, 80);">
+        임시 텍스트
+    </h2>
+
+    
+    <div2 style="left: 32%; top: 350px;">
+        <img src="image0016.png" width="200" height="266px" id = "imagechange56">
+    </div2>
+    
+    <div2 style="left: 59%; top: 350px;">
+        <img src="image0016.png" width="200" height="266px" id = "imagechange78">
+    </div2>
+
+    <div3 style="left: 32%; top: 650px;">
+        <input type="submit" value="선택하기" height="100px" onclick="CASE202(this)" id = "win1"
+        style="font-size: 35px; background-color: rgb(46, 160, 80);"
+        onmouseover="this.style='font-size: 35px; background-color: red;'"
+        onmouseout="this.style='font-size: 35px; background-color: rgb(46, 160, 80);'">
+    </div3>
+
+    <div3 style="left: 59%; top: 650px;">
+        <input type="submit" value="선택하기" height="100px" onclick="CASE203(this)" id = "win2"
+        style="font-size: 35px; background-color: rgb(46, 160, 80);"
+        onmouseover="this.style='font-size: 35px; background-color: red;'"
+        onmouseout="this.style='font-size: 35px; background-color: rgb(46, 160, 80);'">
+    </div3>
+
+    <script type="module">
+        const $change12 = document.getElementById("imagechange56");
+        const $change34 = document.getElementById("imagechange78");
+        const X = document.getElementById("A");
+        const Y = document.getElementById("B");
+        var A = 1;
+        
+        const sc25 = localStorage.getItem("img125score");
+        const sc26 = localStorage.getItem("img126score");
+        const sc27 = localStorage.getItem("img127score");
+        const sc29 = localStorage.getItem("img129score");
+        const sc30 = localStorage.getItem("img130score");
+        const sc31 = localStorage.getItem("img131score");
+
+    if(A == 1){
+        if(sc25 == '2'){
+            $change12.setAttribute("src", "image0025.png");
+            X.innerText = "나토리"
+            A = 0;
+        }
+        else if(sc26 == '2'){
+            $change12.setAttribute("src", "image0026.png");
+            X.innerText = "코이치"
+            A = 0;
+        }
+        else if(sc27 == '2'){
+            $change12.setAttribute("src", "image0027.png");
+            X.innerText = "쿠사카베 타츠오"
+            A = 0;
+        }
+        else{
+            $change12.setAttribute("src", "image0028.png");
+            X.innerText = "린"
+            A = 0;
+        }
+
+        if(sc29 == '2'){
+            $change34.setAttribute("src", "image0029.png");
+            Y.innerText = "룬"
+            A = 0;
+        }
+        else if(sc30 == '2'){
+            $change34.setAttribute("src", "image0030.png");
+            Y.innerText = "가오나시"
+            A = 0;
+        }
+        else if(sc31 == '2'){
+            $change34.setAttribute("src", "image0031.png");
+            Y.innerText = "칸타"
+            A = 0;
+        }
+        else{
+            $change34.setAttribute("src", "image0032.jpg");
+            Y.innerText = "하쿠"
+            A = 0;
+        }
+    }
+
+    var score202 = document.getElementById("win1");
+        score202.addEventListener("click", CASE202);
+    
+    function CASE202(obj){
+    
+     if(sc25 == '2'){
+        localStorage.setItem("img225score",3);
+        location.href = "WebGame004Start1.html";
+        }
+     else if(sc26 == '2'){
+        localStorage.setItem("img226score",3);
+        location.href = "WebGame004Start1.html";
+        }
+     else if(sc27 == '2'){
+        localStorage.setItem("img227score",3);
+        location.href = "WebGame004Start1.html";
+        }
+     else{
+        localStorage.setItem("img228score",3);
+        location.href = "WebGame004Start1.html";
+    }
+    }
+
+    var score203 = document.getElementById("win2");
+    score203.addEventListener("click", CASE203);
+
+    function CASE203(obj){
+
+     if(sc29 == '2'){
+        localStorage.setItem("img229score",3);
+        location.href = "WebGame004Start1.html";
+        }
+     else if(sc30 == '2'){
+        localStorage.setItem("img230score",3);
+        location.href = "WebGame004Start1.html";
+        }
+     else if(sc31 == '2'){
+        localStorage.setItem("img231score",3);
+        location.href = "WebGame004Start1.html";
+     }
+     else{
+        localStorage.setItem("img232score",3);
+        location.href = "WebGame004Start1.html";
+     }
+    }
+        </script>
+</body>
+</html>

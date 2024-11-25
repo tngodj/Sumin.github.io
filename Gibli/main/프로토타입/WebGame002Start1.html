@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        이상형 월드컵 16강(1/8)
+    </title>
+
+    <style>
+    div1{
+        margin : 10px;
+        position : absolute;
+        width: 600px;
+        height: 80px;
+    }
+    div2{
+        position : absolute;
+        margin: 10px;
+    }
+    div3{
+        position : absolute;
+        margin: 10px;
+    }
+    div4{
+        position : absolute;
+        margin: 10px;
+    }
+    h2{
+        position : absolute;
+        width : 200px;
+        margin : 10px;
+        text-align : center;
+    }
+    input{
+            width : 200px;
+        }
+    </style>
+</head>
+<body style="background-image: url('배경화면0003.jpg');">
+
+    <div1 style="left: 35%; top: 30px;">
+        <h1 style="color: white">지브리 캐릭터 이상형 월드컵 16강(1/8)</h1>
+    </div1>
+
+    <h2 id="A" style="left: 32%; top: 300px; background-color: rgb(185, 139, 52);">
+        임시 텍스트
+    </h2>
+
+    <h2 id="B" style="left: 59%; top: 300px; background-color: rgb(185, 139, 52);">
+        임시 텍스트
+    </h2>
+
+    <div2 style="top: 0px; right: 0px;">
+        <a href="WebGame001Start1.html">
+        <input type="submit" value="포기하기" style="font-size: 35px; background-color: rgb(185, 139, 52);">
+        </a>
+    </div2>
+    
+    <div2 style="left: 32%; top: 350px;">
+        <img src="image0016.png" width="200" height="266px" id = "imagechange12">
+    </div2>
+    
+    <div2 style="left: 59%; top: 350px;">
+        <img src="image0016.png" width="200" height="266px" id = "imagechange34">
+    </div2>
+
+    <div3 style="left: 32%; top: 650px;">
+        <input type="submit" value="선택하기" height="100px" onclick="CASE100(this)" id = "win1"
+        style="font-size: 35px; background-color: rgb(185, 139, 52);"
+        onmouseover="this.style='font-size: 35px; background-color: red;'"
+        onmouseout="this.style='font-size: 35px; background-color: rgb(185, 139, 52);'">
+    </div3>
+
+    <div3 style="left: 59%; top: 650px;">
+        <input type="submit" value="선택하기" height="100px" onclick="CASE101(this)" id = "win2"
+        style="font-size: 35px; background-color: rgb(185, 139, 52);"
+        onmouseover="this.style='font-size: 35px; background-color: red;'"
+        onmouseout="this.style='font-size: 35px; background-color: rgb(185, 139, 52);'">
+    </div3>
+
+    <script type="module">
+        const $change12 = document.getElementById("imagechange12");//이미지 교체(왼쪽)
+        const $change34 = document.getElementById("imagechange34");//이미지 교체(오른쪽)
+        const X = document.getElementById("A");
+        const Y = document.getElementById("B");
+        var A = 1;
+        
+        const sc1 = localStorage.getItem("img1score");//기록한 데이터 불러오기(왼쪽)
+        const sc3 = localStorage.getItem("img3score");//기록한 데이터 불러오기(오른쪽)
+
+    if(A == 1){
+        if(sc1 == '1'){
+            $change12.setAttribute("src", "image0001.png");//이전에 왼쪽 선택지를 고를 경우(32강 1회차)
+            X.innerText = "요시오카 하루"//사진 위의 설명
+            A = 0;
+        }
+        else{
+            $change12.setAttribute("src", "image0002.png");//이전에 오른쪽 선택지를 고를 경우
+            X.innerText = "포뇨"
+            A = 0;
+        }
+
+        if(sc3 == '1'){
+            $change34.setAttribute("src", "image0003.png");//이전에 왼쪽 선택지를 고를 경우(32강 2회차)
+            Y.innerText = "쿠사카베 사츠키"
+            A = 0;
+        }
+        else{
+            $change34.setAttribute("src", "image0004.png");//이전에 오른쪽 선택지를 고를 경우
+            Y.innerText = "파즈"
+            A = 0;
+        }
+    }
+
+    var score100 = document.getElementById("win1");//왼쪽 사진 밑의 버튼 이벤트
+        score100.addEventListener("click", CASE100);
+    
+    function CASE100(obj){
+    
+     if(sc1 == '1'){
+        localStorage.setItem("img101score",2);
+        location.href = "WebGame002Start2.html";//왼쪽, 32강 1회차
+        }
+     else{
+        localStorage.setItem("img102score",2);
+        location.href = "WebGame002Start2.html";//오른쪽, 32강 1회차
+        }
+    }
+
+    var score101 = document.getElementById("win2");//오른쪽 사진 밑의 버튼 이벤트
+    score101.addEventListener("click", CASE101);
+    
+    function CASE101(obj){
+     if(sc3 == '1'){
+        localStorage.setItem("img103score",2);
+        location.href = "WebGame002Start2.html";//왼쪽, 32강 2회차
+        }
+     else{
+        localStorage.setItem("img104score",2);
+        location.href = "WebGame002Start2.html";//오른쪽, 32강 2회차
+        }
+    }//이 코드는 WebGame002Start8.html까지 유사함
+        </script>
+</body>
+</html>
